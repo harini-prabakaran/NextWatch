@@ -367,16 +367,16 @@ if st.button(
 
     cards_html = ""
 
-    import urllib.parse
-    for movie in hybrid:
-        search_url = f"https://www.google.com/search?q={urllib.parse.quote(movie + ' movie')}"
+    for i, movie in enumerate(
+        collaborative.index,
+        1
+    ):
 
         cards_html += f"""
-        <a href="{search_url}" target="_blank" style="text-decoration:none;">
-        <div class="movie-card-netflix">🎬 {movie}</div>
-        </a>
+        <div class="movie-card-netflix">
+                🎬 {movie}
+        </div>
         """
-
 
     st.markdown(
         f"""

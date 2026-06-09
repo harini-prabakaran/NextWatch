@@ -367,15 +367,22 @@ if st.button(
 
     cards_html = ""
 
-    for i, movie in enumerate(
-        collaborative.index,
-        1
-    ):
+    import urllib.parse
+
+    for movie in collaborative.index:
+
+        search_url = (
+            "https://www.google.com/search?q="
+            + urllib.parse.quote(movie + " movie")
+        )
 
         cards_html += f"""
-        <div class="movie-card-netflix">
-                🎬 {movie}
-        </div>
+        <a href="{search_url}" target="_blank"
+            style="text-decoration:none; color:white; ">
+            <div class="movie-card-netflix">
+                {movie}
+            </div>
+        </a>
         """
 
     st.markdown(
@@ -406,15 +413,20 @@ if st.button(
 
     cards_html = ""
 
-    for i, movie in enumerate(
-        hybrid,
-        1
-    ):
+    for movie in hybrid:
+
+        search_url = (
+            "https://www.google.com/search?q="
+            + urllib.parse.quote(movie + " movie")
+        )
 
         cards_html += f"""
-        <div class="movie-card-netflix">
-            🎯 {movie}
-        </div>
+        <a href="{search_url}" target="_blank"
+            style="text-decoration:none; color:white; ">
+            <div class="movie-card-netflix">
+                {movie}
+            </div>
+        </a>
         """
 
     st.markdown(

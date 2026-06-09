@@ -1,6 +1,11 @@
 import streamlit as st
+import traceback
 
-from recommender_model import user_movie_matrix
+st.write("Before import")
 
-st.title("Test")
-st.write(user_movie_matrix.shape)
+try:
+    import recommender_model
+    st.success("Import succeeded")
+except Exception as e:
+    st.error(f"Import failed: {e}")
+    st.code(traceback.format_exc())

@@ -347,7 +347,9 @@ if st.button(
             movie_name=selected_movie
         )
 
+    # ==================================
     # VIEWERS ALSO ENJOYED
+    # ==================================
 
     st.markdown("---")
 
@@ -392,7 +394,9 @@ if st.button(
         unsafe_allow_html=True
     )
 
+    # ==================================
     # RECOMMENDED FOR YOU
+    # ==================================
 
     st.markdown("---")
 

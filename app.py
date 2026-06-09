@@ -353,19 +353,16 @@ if st.button(
 
     st.markdown("---")
 
-    st.markdown(
-        "## 👥 Viewers Also Enjoyed"
-    )
+    
 
+    st.markdown(
+        f"### People Who Enjoyed '{selected_movie}' Also Enjoyed"
+    )
     st.caption(
         """
         Movies that are frequently enjoyed by
         viewers who liked the same movie.
         """
-    )
-
-    st.markdown(
-        f"### People Who Enjoyed '{selected_movie}' Also Enjoyed"
     )
 
     cards_html = ""
@@ -397,18 +394,14 @@ if st.button(
     st.markdown("---")
 
     st.markdown(
-        "## 🎯 Recommended For You"
+        f"### Recommended for you "
     )
-
+    
     st.caption(
         """
         Recommendations based on movie themes,
         genres, and viewer preferences.
         """
-    )
-
-    st.markdown(
-        f"### Because You Liked '{selected_movie}'"
     )
 
     cards_html = ""

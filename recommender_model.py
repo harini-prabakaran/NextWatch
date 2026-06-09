@@ -19,7 +19,7 @@ user_movie_matrix = movie_ratings.pivot_table(
 
 movie_vectors = user_movie_matrix.fillna(0).T
 
-pearson_matrix = user_movie_matrix.corr(method="pearson", min_periods=5)
+# pearson_matrix = user_movie_matrix.corr(method="pearson", min_periods=5)
 
 cosine_matrix = pd.DataFrame(
     cosine_similarity(movie_vectors),
@@ -27,20 +27,20 @@ cosine_matrix = pd.DataFrame(
     columns=movie_vectors.index
 )
 
-def recommend_pearson(movie_name, min_ratings=100, top_n=10):
-    if movie_name not in pearson_matrix.columns:
-        return "Movie not found"
+# def recommend_pearson(movie_name, min_ratings=100, top_n=10):
+#     if movie_name not in pearson_matrix.columns:
+#         return "Movie not found"
 
-    recommendations = pearson_matrix[[movie_name]].copy()
-    recommendations.columns = ["correlation"]
-    recommendations.dropna(inplace=True)
-    recommendations["count"] = movie_stats["count"].reindex(recommendations.index)
+#     recommendations = pearson_matrix[[movie_name]].copy()
+#     recommendations.columns = ["correlation"]
+#     recommendations.dropna(inplace=True)
+#     recommendations["count"] = movie_stats["count"].reindex(recommendations.index)
 
-    recommendations = recommendations[recommendations["count"] > min_ratings]
-    recommendations = recommendations.sort_values("correlation", ascending=False)
-    recommendations = recommendations.drop(movie_name, errors="ignore")
+#     recommendations = recommendations[recommendations["count"] > min_ratings]
+#     recommendations = recommendations.sort_values("correlation", ascending=False)
+#     recommendations = recommendations.drop(movie_name, errors="ignore")
 
-    return recommendations.head(top_n)
+#     return recommendations.head(top_n)
 
 def recommend_cosine(movie_name, min_ratings=100, top_n=10):
     if movie_name not in cosine_matrix.columns:

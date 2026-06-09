@@ -1,4 +1,6 @@
 import streamlit as st
 
-st.title("Test App")
-st.write("Hello World")
+from recommender_model import user_movie_matrix
+
+st.title("Test")
+st.write(user_movie_matrix.shape)

@@ -2,17 +2,13 @@
 
 <p align="left">
   <img src="https://img.shields.io/badge/Python-3.11-blue" />
-  <img src="https://img.shields.io/badge/TensorFlow-Matrix%20Factorization-orange" />
-  <img src="https://img.shields.io/badge/Streamlit-Web%20App-red" />
-  <img src="https://img.shields.io/badge/Dataset-MovieLens-green" />
-  <img src="https://img.shields.io/badge/Task-Recommendation%20System-purple" />
+  <img src="https://img.shields.io/badge/TensorFlow-Matrix%20Factorization-teal" />
+  <img src="https://img.shields.io/badge/Streamlit-Web%20App-blue" />
+  <img src="https://img.shields.io/badge/Dataset-MovieLens-teal" />
+  <img src="https://img.shields.io/badge/Task-Recommendation%20System-blue" />
 </p>
 
 NextWatch AI is a machine learning-powered movie recommendation system designed to enhance content discovery. By analyzing historical user rating data, the application generates relevant movie recommendations using collaborative filtering, matrix factorization, and hybrid recommendation techniques.
-
----
-
-🔗 **Try the application:** https://movie-recommender-lycm7eggccafxwmendfe3j.streamlit.app/
 
 ---
 ### Problem Statement
@@ -34,7 +30,7 @@ Key findings from the dataset:
 * Collaborative filtering is well-suited for this type of data.
 
 ---
-#### Item-Based Collaborative Filtering
+#### **Item-Based Collaborative Filtering**
 
 Two similarity-based recommendation approaches were evaluated:
 
@@ -60,23 +56,19 @@ A TensorFlow-based Matrix Factorization model was implemented to learn latent us
 
 ##### RMSE Evaluation
 
-| Model                  |   RMSE |
+| Model                  |   RMSE |     
 | ---------------------- | -----: |
 | Movie Average Baseline | 0.9157 |
 | Matrix Factorization   | 0.8352 |
 
 Matrix Factorization reduced prediction error by **8.8%** compared to the baseline model.
-
 | Metric     |  Score |
 | ---------- | -----: |
 | Train RMSE | 0.7699 |
 | Test RMSE  | 0.8352 |
 
-The small train-test gap suggests good generalization with limited overfitting.
 
-<p align="left">
-  <img src="assets/rmse.png" width="400">
-</p>
+The small train-test gap suggests good generalization with limited overfitting.
 
 ---
 
@@ -90,25 +82,6 @@ The small train-test gap suggests good generalization with limited overfitting.
 | Libraries | TensorFlow, Scikit-Learn, Streamlit |
 | Evaluation Metrics | RMSE, Runtime, Diversity, Reciprocal Recommendation Rate |
 | Dataset | MovieLens |
-
----
-
-### Project Structure
-
-movie-recommender/
-
-├── notebooks/
-│   ├── 01_eda.ipynb
-│   ├── 02_item_based_evaluation.ipynb
-│   └── 03_matrix_factorization.ipynb
-│
-├── data/
-├── recommender_model.py
-├── matrix_factorization.py
-├── hybrid_recommender.py
-├── app.py
-├── requirements.txt
-└── README.md
 
 ---
 

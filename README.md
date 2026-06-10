@@ -10,6 +10,19 @@
 
 NextWatch AI is a machine learning-powered movie recommendation system designed to enhance content discovery. By analyzing historical user rating data, the application generates relevant movie recommendations using collaborative filtering, matrix factorization, and hybrid recommendation techniques.
 
+<table>
+<tr>
+<td><img src="assests/home.png" width="310"/></td>
+<td><img src="assests/search.png" width="300"/></td>
+<td><img src="assests/recommendations.png" width="290"/></td>
+</tr>
+<tr>
+<td align="center">Home Page</td>
+<td align="center">Search Movie</td>
+<td align="center">Recommendations</td>
+</tr>
+</table>
+
 ---
 ### Problem Statement
 

@@ -308,13 +308,6 @@ all_movies = sorted(
 
 st.title("🎬 NextWatch AI")
 
-st.caption(
-    """
-    Find your next favorite movie through intelligent
-    recommendations tailored to your interests.
-    """
-)
-
 st.divider()
 
 # --------------------------------------------------
